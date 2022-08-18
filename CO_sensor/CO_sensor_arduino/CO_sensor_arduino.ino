@@ -6,4 +6,5 @@ void loop() {
   int data=analogRead(A0);
   Serial.println(data);
   delay (300);
+ 
 }
