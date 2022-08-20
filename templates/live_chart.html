@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Flask App </title>
+    <title>CO_Sensor_live_data</title>
 
 
     <!-- Bootstraps Java Scipts Links -->
@@ -48,11 +48,11 @@
 
 
     <script>
-        var chart;
+        var graph;
 
         function requestData()
         {
-            // Ajax call to get the Data from Flask
+            //call to get the Data from Flask
             var requests = $.get('/data');
 
 
@@ -70,8 +70,8 @@
         }
 
         $(document).ready(function() {
-            chart = new Highcharts.Chart({
-                chart: {
+            graph = new Highcharts.Chart({
+                graph: {
                     renderTo: 'data-container',
                     defaultSeriesType: 'spline',
                     events: {
@@ -91,7 +91,7 @@
                     maxPadding: 0.2,
                     title: {
                         text: 'ppm',
-                        margin: 80
+                        margin: 70
                     }
                 },
                 series: [{
